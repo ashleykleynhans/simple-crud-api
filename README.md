@@ -8,9 +8,9 @@ This demo is built using MongoDB and NodeJS 8.9.4 (the current LTS release).
 
 ## Generating API Documentation
 
-`npm install apidoc -g`
+    npm install apidoc -g
 
-`apidoc -e node_modules`
+    apidoc -e node_modules
 
 Open the **docs/index.html** file in your web browser.
 
