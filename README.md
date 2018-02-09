@@ -33,3 +33,10 @@ Open the **docs/index.html** file in your web browser.
 Tests can be run in the Docker container as follows
 
     `docker-compose run app mocha`
+
+
+## Job Scheduler
+
+The job scheduler can be run as follows
+
+    `docker-compose run app node scheduler/task.js`

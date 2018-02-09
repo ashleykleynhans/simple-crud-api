@@ -6,12 +6,16 @@
   "author": "Ashley Kleynhans",
   "license": "ISC",
   "dependencies": {
+    "cron-parser": "^2.4.4",
     "lodash": "^4.17.5",
+    "moment": "^2.20.1",
     "mongoose": "^5.0.3",
     "node-restify-validation": "^1.1.1",
+    "node-schedule": "^1.3.0",
     "restify": "^6.3.4",
     "restify-errors": "^5.0.0",
-    "restify-plugins": "^1.6.0"
+    "restify-plugins": "^1.6.0",
+    "winston": "^2.4.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
