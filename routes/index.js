@@ -135,7 +135,14 @@ module.exports = function(server) {
      *      curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://hostname/api/users
      */
     server.get('/api/users', (req, res, next) => {
-        User.find({}).exec(function(err, docs) {
+        // Pagination
+        let limit = Math.abs(req.query.limit) || 100;
+        let page = (Math.abs(req.query.page) || 1) - 1;
+
+        User.find()
+            .limit(limit)
+            .skip(limit * page)
+            .exec(function(err, docs) {
             if (err) {
                 console.error(err);
                 return next(
@@ -529,7 +536,14 @@ module.exports = function(server) {
                 );
             }
 
-            Task.find({user_id: req.params.user_id}, function (err, docs) {
+            // Pagination
+            let limit = Math.abs(req.query.limit) || 100;
+            let page = (Math.abs(req.query.page) || 1) - 1;
+
+            Task.find({user_id: req.params.user_id})
+                .limit(limit)
+                .skip(limit * page)
+                .exec(function (err, docs) {
                 if (err) {
                     console.error(err);
                     return next(
