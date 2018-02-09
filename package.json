@@ -1,0 +1,27 @@
+{
+  "name": "bs-nodejs-crud-test",
+  "version": "1.0.0",
+  "description": "Simple CRUD Test",
+  "main": "index.js",
+  "author": "Ashley Kleynhans",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.3",
+    "node-restify-validation": "^1.1.1",
+    "restify": "^6.3.4",
+    "restify-errors": "^5.0.0",
+    "restify-plugins": "^1.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^5.0.0",
+    "sinon": "^4.2.2",
+    "sinon-mongoose": "^2.0.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --timeout 10000"
+  }
+}
