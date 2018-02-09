@@ -24,7 +24,7 @@ Open the **docs/index.html** file in your web browser.
 1. Clone the repo
 2. Start the Docker containers, which will download and install all the required software
 
-    `docker-compose up`
+        docker-compose up
     
 3. The API listens for incoming connections at http://127.0.0.1:3000
 
@@ -32,11 +32,11 @@ Open the **docs/index.html** file in your web browser.
 
 Tests can be run in the Docker container as follows
 
-    `docker-compose run app mocha`
+    docker-compose run app mocha
 
 
 ## Job Scheduler
 
 The job scheduler can be run as follows
 
-    `docker-compose run app node scheduler/task.js`
+    docker-compose run app node scheduler/task.js
